@@ -14,5 +14,13 @@ searchButtion.addEventListener("click", async () => {
 
   // Fetch products from the API based on the keyword
   const products = await getProducts(keyword);
+  // Show the products on the page
+  displayProducts(products);
+
+  // Clear the search box after the search is done
+  searchInput.value = "";
 });
+
+
+
  
