@@ -3,11 +3,11 @@ import { displayProducts } from "./ui.js";
 console.log("main.js loaded");
 
 //finding search input field and sreach buttion ont the page
-const searchInput = document.querySelector("input ['type=search']");
-const searchButtion = document.querySelector("buttion");
+const searchInput = document.querySelector("input[type='search']");
+const searchButton = document.querySelector("button");
 
 //add eventListner to the buttion
-searchButtion.addEventListener("click", async () => {
+searchButton.addEventListener("click", async () => {
   // Get the product that user typed into the search box
   const keyword = searchInput.value;
   console.log("Search clicked:", keyword);
@@ -20,6 +20,11 @@ searchButtion.addEventListener("click", async () => {
   // Clear the search box after the search is done
   searchInput.value = "";
 });
+  // Load all products on page load
+getProducts().then(displayProducts);
+
+
+
 
 
 
