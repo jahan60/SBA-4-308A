@@ -20,12 +20,5 @@ searchButton.addEventListener("click", async () => {
   // Clear the search box after the search is done
   searchInput.value = "";
 });
-  // Load all products on page load
+// Load all products on page load
 getProducts().then(displayProducts);
-
-
-
-
-
-
- 

@@ -5,8 +5,8 @@ export function displayProducts(products) {
   const gallery = document.getElementById("product-gallery");
   //clear previous result
   gallery.innerHTML = "";
-  
-//loop throught each product
+
+  //loop through each product
   products.forEach((product) => {
     console.log("showing product:", product.title);
     //create a new card element
@@ -23,7 +23,7 @@ export function displayProducts(products) {
     }
     //setting HTML content inside the card element.
     //Insert the product image, title, and price into the card. If the image URL is broken, the onerror handler swaps in a placeholder image.
-   card.innerHTML = `
+    card.innerHTML = `
   <img
     src="${imgSrc}"
     alt="${product.title}"
@@ -33,6 +33,6 @@ export function displayProducts(products) {
   <p>$${product.price}</p>
 `;
 
-gallery.appendChild(card);
+    gallery.appendChild(card);
   });
 }
