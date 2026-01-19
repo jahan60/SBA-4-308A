@@ -14,7 +14,7 @@ export async function getProducts(keyword = "") {
 
     console.log("Filtered products:", filtered.length);
 
-    return filtered;   // <-- THIS is what you were missing
+    return filtered;   
   } catch (error) {
     console.error("Fetch error:", error);
     return [];
