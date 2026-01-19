@@ -3,11 +3,16 @@ import { displayProducts } from "./ui.js";
 console.log("main.js loaded");
 
 //finding search input field and sreach buttion ont the page
-const searchInput = document.querySelector("input ['type=search']")
+const searchInput = document.querySelector("input ['type=search']");
 const searchButtion = document.querySelector("buttion");
 
-//add eventListner to the buttion 
-searchButtion.addEventListener("click", async ()=>{
-    
-}
-)
+//add eventListner to the buttion
+searchButtion.addEventListener("click", async () => {
+  // Get the product that user typed into the search box
+  const keyword = searchInput.value;
+  console.log("Search clicked:", keyword);
+
+  // Fetch products from the API based on the keyword
+  const products = await getProducts(keyword);
+});
+ 
